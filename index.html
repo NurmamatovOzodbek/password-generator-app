@@ -8,6 +8,66 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <section>
+      <h1>Password Generator</h1>
+      <div class="pass__gen">
+        <div class="parol">
+          <p id="pwrd"></p>
+          <img src="./img/icon-copy.svg" alt="copy" />
+        </div>
+        <div class="pass__about">
+          <div class="pass__length">
+            <div class="len">
+              <p>Character Length</p>
+              <label for="range">25</label>
+            </div>
+            <input type="range" min="0" max="25">
+          </div>
+          <form class="chekcboxs">
+            <div class="check">
+              <input type="checkbox" name="upper" id="upper" />
+              <label for="upper"></label>
+              <span>Include Uppercase Letters</span>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="lower" id="lower" />
+              <label for="lower"></label>
+              <span>Include LowerCase Letters</span>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="number" id="number" />
+              <label for="number"></label>
+              <span>Include Numbers</span>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="symbol" id="symbol" />
+              <label for="symbol"></label>
+              <span>Include Symbols</span>
+            </div>
+          </form>
+          <div class="strength">
+            <p>STRENGTH</p>
+            <div class="pows">
+              <p>MEDIUM</p>
+              <div class="pow">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <button class="btn">
+            GENERATE
+            <img src="./img/icon-arrow-right.svg" alt="arrow right" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+
     <script src="./js/main.js"></script>
   </body>
 </html>
