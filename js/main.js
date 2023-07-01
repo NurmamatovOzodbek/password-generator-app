@@ -24,26 +24,26 @@ for(let i of checkbox){
     checkedCheckbox = checked.filter(function(value){
       return value == true
     })
-    indicator(checkedCheckbox.length)
+    passPow(checkedCheckbox.length)
   })
 }
 
-function indicator(strength){
-  if(strength == 0){
+function passPow(strhPow){
+  if(strhPow == 0){
     strengthName.innerText = "";
     passValuePowColor = "transparent"
   }
   else{
-    for(let i = 0; i < strength; i++){
-      if(strength == 1){
+    for(let i = 0; i < strhPow; i++){
+      if(strhPow == 1){
         strengthName.innerText = "TOO WEAK!";
         passValuePowColor =  "#F64A4A";
       }
-      else if(strength == 2){
+      else if(strhPow == 2){
         strengthName.innerText = "WEAK";
         passValuePowColor = "#FB7C58";
       }
-      else if(strength == 3){
+      else if(strhPow == 3){
         strengthName.innerText = "MEDIUM";
         passValuePowColor = "#F8CD65";
       }
@@ -57,7 +57,7 @@ function indicator(strength){
         background: ${passValuePowColor};
       `;
     }
-    for(let i = strength; i < 4; i++){
+    for(let i = strhPow; i < 4; i++){
       passValuePow[i].style.cssText = `
       border: 2px solid #E6E5EA;
       background: transparent;
@@ -66,12 +66,12 @@ function indicator(strength){
   }
 }
 
-function createPassword(elements){
+function creatPass(e){
   if(checked.includes(true)){
     password.innerText = ""
     password.style.color = "#E6E5EA"
     for(let i = 1; i <= passLengthInp.value; i++){
-      passValue = elements[Math.trunc(Math.random() * elements.length)]
+      passValue = e[Math.trunc(Math.random() * e.length)]
       randomPassValue = passValue[Math.trunc(Math.random() * passValue.length)]
       password.innerText += randomPassValue
     }
@@ -90,5 +90,5 @@ btn.addEventListener("click", () => {
       charactersPassed.push(passwordValue[i])
     }
   }
-  createPassword(charactersPassed)
+  creatPass(charactersPassed)
 })
