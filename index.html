@@ -19,9 +19,10 @@
           <div class="pass__length">
             <div class="len">
               <p>Character Length</p>
-              <label for="range">25</label>
+              <label for="range">15</label>
             </div>
-            <input type="range" min="0" max="25">
+            <div class="color"></div>
+            <input type="range" min="5" max="25" value="15" />
           </div>
           <form class="chekcboxs">
             <div class="check">
@@ -41,14 +42,14 @@
             </div>
             <div class="check">
               <input type="checkbox" name="symbol" id="symbol" />
-              <label for="symbol"></label>
+              <label for="symbol"> </label>
               <span>Include Symbols</span>
             </div>
           </form>
           <div class="strength">
             <p>STRENGTH</p>
             <div class="pows">
-              <p>MEDIUM</p>
+              <p></p>
               <div class="pow">
                 <span></span>
                 <span></span>
@@ -57,16 +58,18 @@
               </div>
             </div>
           </div>
-          <button class="btn">
+          <button>
             GENERATE
-            <img src="./img/icon-arrow-right.svg" alt="arrow right" />
+            <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#24232C"
+                d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+              />
+            </svg>
           </button>
         </div>
       </div>
     </section>
-
-
-
 
     <script src="./js/main.js"></script>
   </body>
