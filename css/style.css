@@ -50,8 +50,11 @@ h1{
   color: #E6E5EA;
   line-height: normal;
 }
-.parol img{
+.parol svg{
   cursor: pointer;
+}
+.parol svg:hover path {
+  fill: white;
 }
 .pass__about{
   width: 540px;
